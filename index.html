@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StudyQuest</title>
+    <!-- <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}"> -->
+    <likr rel ="stylesheet" href = "/static/styles.css"></a>
+</head>
+<body>
+    <header>
+        <h1>StudyQuest</h1>
+    </header>
+    
+    <!-- Login Form -->
+    <div id="login-container">
+        <h1>Login</h1>
+        <form id="login-form">
+            <input type="email" name="email" id="username" placeholder="Email" required>
+            <input type="password" name="password" id="password" placeholder="Password" required>
+            <button type="submit">Login</button>
+        </form>
+        <p>Don't have an account? <a href="#" onclick="showSignup()">Sign Up</a></p>
+    </div>
+
+    <!-- Signup Form -->
+    <div id="signup-container" style="display:none;">
+        <h1>Sign Up</h1>
+        <form id="signup-form">
+            <input type="email" name="email" id="newUsername" placeholder="Email" required>
+            <input type="password" name="password" id="newPassword" placeholder="Password" required>
+            <button type="submit">Sign Up</button>
+        </form>
+        <p>Already have an account? <a href="#" onclick="showLogin()">Login</a></p>
+    </div>
+
+    <!-- Home Page -->
+    <div id="home-container" style="display: none;">
+        <h1>Welcome, <span id="welcome-username"></span></h1>
+        <button onclick="logout()">Logout</button>
+        <div class="options">
+            <button id="createGroupBtn">Create a Group</button>
+            <button id="joinGroupBtn">Join a Group</button>
+        </div>
+        <div id="group-details" style="display: none;">
+            <h2>Group Details</h2>
+            <p id="group-name"></p>
+            <p id="group-privacy"></p>
+        </div>
+    </div>
+
+    <!-- Create Group Form -->
+    <div class="container group-creation hidden">
+        <h2>Create a Group</h2>
+        <form id="createGroupForm">
+            <input type="text" id="groupName" placeholder="Group Name" required>
+            <input type="email" id="adminEmail" placeholder="Your Email" value="{{ session['email'] }}" readonly required>
+            <label for="groupPrivacy">Group Privacy:</label>
+            <select id="groupPrivacy">
+                <option value="public">Public</option>
+                <option value="private">Private</option>
+            </select>
+            <button type="submit">Create Group</button>
+            <button id="backToOptionsBtnCreate">Back</button>
+        </form>
+    </div>
+
+    <!-- Join Group Section -->
+    <div class="container group-join hidden">
+        <h2>Join a Group</h2>
+        <div id="publicGroupsList"></div>
+        <button id="backToOptionsBtn">Back to Options</button>
+    </div>
+
+    <!-- <script src="{{ url_for('static', filename='script.js') }}"></script> -->
+    <script src="static/sscript.js"></script>
+</body>
+</html>

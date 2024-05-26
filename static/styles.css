@@ -1,0 +1,150 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+    text-align: center;
+}
+
+header {
+    background-color: #007367;
+    color: white;
+    padding: 20px 0;
+    font-size: 2em;
+}
+
+#login-container, #signup-container, #home-container, #groups-container, #resources-container, .group-creation, .group-join {
+    max-width: 400px;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+#signup-container, #home-container, #groups-container, #resources-container, .group-creation, .group-join {
+    max-width: 400px;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+input[type="email"], input[type="password"], input[type="text"], select, button {
+    margin: 10px 0;
+    padding: 10px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #007367;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #005f55; /* Darker green for hover */
+}
+
+.hidden {
+    display: none;
+}
+
+.container {
+    width: 90%;
+    max-width: 500px;
+    text-align: center;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    border-radius: 8px;
+}
+
+.options button {
+    margin: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 100%;
+    max-width: 200px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form input, form select, form button {
+    margin: 10px;
+    padding: 10px;
+    font-size: 16px;
+    width: 100%;
+}
+
+#publicGroupsList {
+    margin-top: 20px;
+}
+
+@media (max-width: 600px) {
+    .container {
+        width: 100%;
+        margin: 0 10px;
+        padding: 10px;
+    }
+
+    form input, form select, form button {
+        font-size: 14px;
+    }
+
+    .options button {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+}
+
+.group-item {
+    padding: 10px;
+    border: 1px solid #ccc;
+    margin-bottom: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.group-item button {
+    margin-left: 10px;
+    background-color: #007367;
+    color: #612f2f;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.group-item button:hover {
+    background-color: #005f55;
+}
+
+#backToOptionsBtn {
+    margin-top: 20px;
+}
+
+#backToOptionsBtn button {
+    padding: 10px 20px;
+    background-color: #007367;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#backToOptionsBtn button:hover {
+    background-color: #005f55;
+}
