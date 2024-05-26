@@ -4,7 +4,7 @@ from werkzeug.security import generate_password_hash, check_password_hash
 import time
 
 app = Flask(__name__)
-
+app.secret_key = '5abb93982d9f60735086f7f776156a96adce24e62d0784a51a8b4c19b7bec935'
 
 # Initialize the database
 def init_db():
