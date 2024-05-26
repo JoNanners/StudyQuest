@@ -4,7 +4,6 @@ from werkzeug.security import generate_password_hash, check_password_hash
 import time
 
 app = Flask(__name__)
-app.secret_key = 'StudyQuest'
 
 # Initialize the database
 def init_db():
